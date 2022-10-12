@@ -1,0 +1,177 @@
+div#app {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  margin: 0 auto;
+  direction: rtl;
+  background: #f9f9f9;
+  margin: 20px auto;
+  padding: 15px 10px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px #1818186b;
+}
+
+.addWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listTodo ul {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listTodo ul li {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.listTodo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listTodo ul li button {
+  margin-right: auto;
+  background: transparent;
+  border: 1px solid #f00;
+  color: #f00;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+input#inputAdd {
+  padding: 4px;
+  flex: 1 auto;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 0px 4px 4px 0;
+  margin-bottom: 10px;
+}
+
+.addWrapper button {
+  padding: 4px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
+  margin-bottom: 10px;
+  width: 50px;
+}
+
+.listTodo ul li:hover button,
+.listTodo ul li:hover input {
+  opacity: 1;
+}
+
+li:after {
+  content: '';
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  background: #01680166;
+  border-radius: 5px;
+  right: 40px;
+  transition: 0.3s all;
+}
+
+li {
+  opacity: 1;
+}
+
+li.checked {
+  opacity: 0.5;
+}
+
+li.checked:after {
+  width: 80%;
+  height: 1px;
+}
+
+input[type='checkbox'] {
+  all: unset;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #c3c3c3;
+  margin-left: 10px;
+  position: relative;
+  transition: 0.1s all;
+  border-radius: 4px;
+}
+
+input[type='checkbox']:checked {
+  border-color: green;
+}
+
+input[type='checkbox']:after {
+  content: '';
+  border-top: 0px solid currentColor;
+  color: green;
+  width: 15px;
+  height: 6px;
+  position: absolute;
+  left: 2px;
+  border-right: 0px solid currentColor;
+  transform: rotate(131deg);
+  top: 4px;
+  transition: 0.1s all;
+}
+
+input[type='checkbox']:checked:after {
+  content: '';
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  top: 4px;
+}
+
+div#alert {
+  position: fixed;
+  top: 0;
+  right: 42vw;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0px 3px 20px #8c8c8c;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+div#alert div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+div#alert div button {
+  width: 100%;
+}
+
+@media screen and (max-width: 460px) {
+  div#alert {
+    right: 33vw;
+  }
+}
